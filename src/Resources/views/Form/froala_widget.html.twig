@@ -48,7 +48,13 @@
     {% endif %}
 
     {% if froala_customJS is defined %}
-        <script type="text/javascript"  src="{{ asset( customJS ) }}"></script>
+        {% if froala_customJS is iterable %}
+            {% for script in froala_customJS %}
+                <script type="text/javascript" src="{{ asset(script) }}"></script>
+            {% endfor %}
+        {% else %}
+            <script type="text/javascript" src="{{ asset(froala_customJS) }}"></script>
+        {% endif %}
     {% endif %}
 
     {# Load the editor. #}
