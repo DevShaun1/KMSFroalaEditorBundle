@@ -167,10 +167,14 @@ kms_froala_editor:
     # Defaults to "/bundles/kmsfroalaeditor/froala_editor"
     basePath: "/my/custom/path".
 
-    # Custom JS file.
-    # Usage: add custom plugins/buttons...
-    customJS: "/custom/js/path"
-```
+    # Custom JS file(s).
+    # Usage: add custom plugins/buttons.
+    # To load a single custom JavaScript file:
+    customJS: "/path/to/custom/script.js"
+    # To load multiple custom JavaScript files:
+    customJS:
+    - "/path/to/custom/script1.js"
+    - "/path/to/custom/script2.js"
 
 ### Step 6: Add Froala to your form
 
